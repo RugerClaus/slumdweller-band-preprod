@@ -1,5 +1,6 @@
 <?php
     include '../backend/router.php';
+    session_start();
 
     $logged_in = check_login($login_system);
 

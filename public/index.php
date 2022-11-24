@@ -1,5 +1,5 @@
 <?php
-    include '../backend/router.php'
+    include '../backend/Controller/session.php';
 ?>
 
 <!DOCTYPE html>

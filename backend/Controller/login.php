@@ -26,6 +26,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $page = $_SESSION['page'];
             header("location: ../../admin/admin.php?=$page");
             die;
-        }  
+        }  else {
+            header('location: ../../admin/login_page.php');
+        }
     }
 }

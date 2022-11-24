@@ -1,5 +1,4 @@
 <?php
-    include '../admin/backend/session.php';
     include 'classes.php';
     include 'connection.php';
 

@@ -32,3 +32,4 @@ if(isset($_GET['Contact'])){
     header("location: ../public/index.php?=$page");
 }
 
+
