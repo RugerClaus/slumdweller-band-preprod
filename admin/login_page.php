@@ -13,7 +13,7 @@
         <input  type="text" name="user_name" placeholder="username">
         <input type="password" name="password" placeholder="password">
         <button type="submit" class="btn">Log In!</button>
-        <a href="signup.php">Sign Up!</a>
+        <a href="signup_page.php">Sign Up!</a>
     </form>
 </body>
 </html>
