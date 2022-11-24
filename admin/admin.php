@@ -1,29 +1,11 @@
 <?php 
     include 'backend/session.php';
     include '../backend/Model/objects.php';
-    if(isset($_GET['adminhome'])){
-        $_SESSION['page'] = 'Admin_Home';
-        $page = $_SESSION['page'];
-        header("location: admin.php?=$page");
-        
-    }
-    if(isset($_GET['aboutmanager'])){
-        $_SESSION['page'] = 'About_Manager';
-        $page = $_SESSION['page'];
-        header("location: admin.php?=$page");
-        
-    }
-    if(isset($_GET['productmanager'])){
-        $_SESSION['page'] = 'Product_Manager';
-        $page = $_SESSION['page'];
-        header("location: admin.php?=$page");
-    }
-    if(isset($_GET['tourdatemanager'])){
-        $_SESSION['page'] = 'Tour_Date_Manger';
-        $page = $_SESSION['page'];
-        header("location: admin.php?=$page");
-        
-    }
+    include '../backend/Model/connection.php';
+    
+    $query = "SELECT * FROM products";
+
+    $products = $slumdweller->query($query);
 ?>
 
 <!DOCTYPE html>
@@ -44,21 +26,33 @@
             <input type="submit" name="tourdatemanager" value="Tour Manager" />
         </form>
     </header>
-    <main>
+    <main style='text-align:center;'>
         <?php
-            while($row = $result->fetch_assoc()){
-                if($_SESSION['page'] === 'Admin_Home'){
-                    include_once '../frontend/views/admin/admin_home.php';
-                }
-                if($_SESSION['page'] === 'About_Manager'){
-                    include_once '../frontend/views/admin/about_manager.php';
-                }
-                if($_SESSION['page'] === 'Product_Manger'){
-                    include_once '../frontend/views/admin/product_manager.php';
-                }
-                if($_SESSION['page'] === 'Tour_Date_Manager'){
-                    include_once '../frontend/views/admin/tour_date_manager.php';
-                }
+            if($_SESSION['page'] === 'adminlanding'){
+                echo "<h1 >Welcome</h1>";
+            }
+            if(isset($_GET['adminhome'])){
+                $_SESSION['page'] = 'Admin_Home';
+                $page = $_SESSION['page'];
+                include 'frontend/views/admin_home.php';
+                
+            }
+            if(isset($_GET['aboutmanager'])){
+                $_SESSION['page'] = 'About_Manager';
+                $page = $_SESSION['page'];
+                include 'frontend/views/about_manager.php';
+                
+            }
+            if(isset($_GET['productmanager'])){
+                $_SESSION['page'] = 'Product_Manager';
+                $page = $_SESSION['page'];
+                include 'frontend/views/product_manager.php';
+            }
+            if(isset($_GET['tourdatemanager'])){
+                $_SESSION['page'] = 'Tour_Date_Manger';
+                $page = $_SESSION['page'];
+                include 'frontend/views/tour_date_manager.php';
+                
             }
         ?>
     </main>

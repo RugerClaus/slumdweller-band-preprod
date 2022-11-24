@@ -7,7 +7,7 @@
     if(!$logged_in){
         header('location: login_page.php');
     }else {
-        $_SESSION['page'] = 'Admin_Home';
+        $_SESSION['page'] = 'adminlanding';
         $page = $_SESSION['page'];
         header("location: admin.php?=$page");
     }
