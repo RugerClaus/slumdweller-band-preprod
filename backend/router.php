@@ -31,9 +31,4 @@ if(isset($_GET['Contact'])){
     $page = $_SESSION['page'];
     header("location: ../public/index.php?=$page");
 }
-if(isset($_GET['Admin_Home'])){
-    $_SESSION['page'] = 'Admin_Home';
-    $page = $_SESSION['page'];
-    header("location: ../private/index.php?=$page");
-}
 

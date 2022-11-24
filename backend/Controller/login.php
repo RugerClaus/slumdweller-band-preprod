@@ -22,7 +22,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         if($result && mysqli_num_rows($result) > 0 && password_verify($password,$user_data['password'])) {
             $_SESSION['user_id'] = $user_data['user_id'];
             $_SESSION['user_name'] = $user_name;
-            header("location: ../../admin/admin.php");
+            $_SESSION['page'] = 'Admin_Home';
+            $page = $_SESSION['page'];
+            header("location: ../../admin/admin.php?=$page");
             die;
         }  
     }
