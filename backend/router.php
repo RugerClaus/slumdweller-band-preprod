@@ -22,7 +22,7 @@ if(isset($_GET['Albums_and_Merch'])){
     header("location: ../public/index.php?=$page");
 }
 if(isset($_GET['About'])){
-    $_SESSION['page'] = 'about';
+    $_SESSION['page'] = 'About';
     $page = $_SESSION['page'];
     header("location: ../public/index.php?=$page");
 }

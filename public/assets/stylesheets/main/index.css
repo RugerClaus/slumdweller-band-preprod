@@ -7,6 +7,12 @@
   font-family: helvetica;
 }
 
+body {
+  background-color: black;
+  overflow: hidden;
+  color: white;
+}
+
 .sidebar {
   width: 3vw;
   height: 100vh;
@@ -43,11 +49,22 @@
   background-color: none;
   background: none;
   font-size: 2rem;
-  text-shadow: rgb(50, 184, 59) 0px 0px 40px;
+  text-shadow: rgb(0, 244, 126) 0px 0px 40px;
   color: darkgray;
 }
 .header form input:hover {
   cursor: pointer;
   color: greenyellow;
-  text-shadow: rgb(50, 184, 59) 0px 50px 40px;
+  text-shadow: rgb(0, 244, 126) 0px 50px 40px;
+}
+
+.landing {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-animation: scale-in-center 2s;
+          animation: scale-in-center 2s;
 }/*# sourceMappingURL=index.css.map */

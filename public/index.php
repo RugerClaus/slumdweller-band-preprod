@@ -44,7 +44,10 @@
                 include '../frontend/views/albums_and_merch.php';
             }
             if($_SESSION['page'] === 'About'){
-                include '../frontend/views/About.php';
+                include '../frontend/views/about.php';
+            }
+            if($_SESSION['page'] === 'Contact'){
+                include '../frontend/views/contact.php';
             }
         ?>
     </main>
