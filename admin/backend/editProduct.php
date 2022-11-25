@@ -8,7 +8,7 @@
         $instock = $_POST['instock'];
         $desc = $_POST['description'];
         $shopQTY = $_POST['stockquantity'];
-        $uploaddir = 'assets/images/';
+        $uploaddir = '../admin/assets/images/';
         $uploadfile1 = $uploaddir . basename($_FILES['image1']['name']);
         $uploadfile2 = $uploaddir . basename($_FILES['image2']['name']);
         $uploadfile3 = $uploaddir . basename($_FILES['image3']['name']);

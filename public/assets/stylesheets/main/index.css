@@ -38,6 +38,7 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 .header form {
   display: flex;
@@ -58,22 +59,45 @@ body {
   text-shadow: rgb(0, 244, 126) 0px 50px 40px;
 }
 
-section {
+main {
+  position: absolute;
+  bottom: 0;
+  height: 90vh;
+  width: 100vw;
+  padding: 10px;
+  overflow-y: scroll;
+}
+main section {
   display: flex;
-  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
-
-.landing {
+main .landing {
   display: flex;
-  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   -webkit-animation: scale-in-center 2s;
           animation: scale-in-center 2s;
+}
+main .merch {
+  display: block;
+}
+main .merch .product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .merch .product img {
+  width: 20%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 350;
+}
+
+::-webkit-scrollbar-track {
+  background-color: green;
 }/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,7 @@
 <?php
     include '../backend/Controller/session.php';
+    include '../backend/Model/connection.php';
+    $products = $slumdweller->query("SELECT * FROM products");
 ?>
 
 <!DOCTYPE html>
