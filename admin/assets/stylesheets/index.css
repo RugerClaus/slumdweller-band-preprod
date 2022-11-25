@@ -23,6 +23,10 @@
   align-items: center;
   overflow-y: scroll;
   padding: 30px;
+  gap: 2rem;
+}
+.productEditor img {
+  max-width: 30%;
 }
 .productEditor form {
   display: flex;
@@ -43,4 +47,21 @@
   font-size: 2rem;
   font-family: helvetica;
   resize: none;
+}
+
+.productManager {
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  padding: 30px;
+  gap: 2rem;
+}
+.productManager table tr td {
+  border: 1px solid black;
+}
+.productManager table tr td img {
+  max-width: 40%;
 }/*# sourceMappingURL=index.css.map */

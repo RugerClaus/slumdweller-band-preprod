@@ -6,6 +6,8 @@
     $query = "SELECT * FROM products";
 
     $products = $slumdweller->query($query);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +55,11 @@
                 $page = $_SESSION['page'];
                 include 'frontend/views/tour_date_manager.php';
                 
+            }
+            if(isset($_GET['edit'])){
+                $_SESSION['page'] = 'edit_product';
+                $page = $_SESSION['page'];
+                include 'frontend/views/edit_product.php';
             }
         ?>
     </main>
