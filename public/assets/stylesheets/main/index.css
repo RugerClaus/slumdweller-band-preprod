@@ -58,6 +58,15 @@ body {
   text-shadow: rgb(0, 244, 126) 0px 50px 40px;
 }
 
+section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .landing {
   display: flex;
   height: 100vh;
