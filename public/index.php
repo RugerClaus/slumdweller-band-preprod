@@ -51,6 +51,12 @@
             if($_SESSION['page'] === 'Contact'){
                 include '../frontend/views/contact.php';
             }
+            if(isset($_POST['details'])){
+                $_SESSION['page'] = 'Details';
+            }
+            if($_SESSION['page'] === 'Details'){
+                include '../frontend/views/details.php';
+            }
         ?>
     </main>
 </body>
