@@ -21,6 +21,6 @@
             <input type="submit" name="details" value="View Details" class="btn">
         </form>
     </div>
-
+            
     <?php } ?>
 </section>

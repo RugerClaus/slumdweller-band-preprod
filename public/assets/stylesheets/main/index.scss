@@ -88,6 +88,17 @@ main {
         img {
             width: 50%;
         }
+        .subimages {
+            width: 40%;
+            align-self: center;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            .subimage{
+                border: 1px solid white;
+                width: 100px;
+                height: 100px;
+            }
+        }
     }
     .landing {
         display: flex;

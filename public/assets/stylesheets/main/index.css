@@ -92,6 +92,17 @@ main .details {
 main .details img {
   width: 50%;
 }
+main .details .subimages {
+  width: 40%;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main .details .subimages .subimage {
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+}
 main .landing {
   display: flex;
   justify-content: center;
