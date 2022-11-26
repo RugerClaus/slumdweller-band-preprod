@@ -81,6 +81,17 @@ main section {
   height: -moz-fit-content;
   height: fit-content;
 }
+main .details {
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main .details img {
+  width: 50%;
+}
 main .landing {
   display: flex;
   justify-content: center;
@@ -107,8 +118,8 @@ main .merch .product img {
   width: 40%;
 }
 
-::-webkit-scrollbar-track {
-  background-color: green;
+::-webkit-scrollbar {
+  background-color: rgb(0, 244, 126);
 }
 
 .btn {

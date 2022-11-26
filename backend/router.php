@@ -5,6 +5,7 @@ include 'functions.php';
 require_once 'Controller/mail.php';
 include 'Model/geolocation.php';
 include 'Model/connection.php';
+include 'Model/classes.php';
 
 if(isset($_GET['Home'])){
     $_SESSION['page'] = 'Home';
@@ -29,6 +30,24 @@ if(isset($_GET['About'])){
 if(isset($_GET['Contact'])){
     $_SESSION['page'] = 'Contact';
     $page = $_SESSION['page'];
+    header("location: ../public/index.php?=$page");
+}
+if(isset($_POST['details'])){
+    $_SESSION['page'] = 'Details';
+    $page = $_SESSION['page'];
+    $_SESSION['product'] = array(
+        "id" => $_POST['product_id'],
+        "name"=> $_POST['name'],
+        "image1"=>$_POST['image1'],
+        "image2"=>$_POST['image2'],
+        "image3"=>$_POST['image3'],
+        "image4"=>$_POST['image4'],
+        "image5"=>$_POST['image5'],
+        "type"=>$_POST['type'],
+        "instock"=>$_POST['instock'],
+        "description"=>$_POST['description'],
+        "price"=>$_POST['price']
+    );
     header("location: ../public/index.php?=$page");
 }
 

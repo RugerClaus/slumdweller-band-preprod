@@ -71,7 +71,6 @@ main {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    
     section {
         display: flex;
         width: 80%;
@@ -80,10 +79,15 @@ main {
         border-left: 1px solid rgb(0, 244, 126,1);
         border-right: 1px solid rgb(0, 244, 126,1);
         height: fit-content;
-        
-        
-    
-    
+    }
+    .details {
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        height: fit-content;
+        img {
+            width: 50%;
+        }
     }
     .landing {
         display: flex;
@@ -112,8 +116,8 @@ main {
         }
     }
 }
-::-webkit-scrollbar-track {
-    background-color: green;
+::-webkit-scrollbar {
+    background-color: rgb(0, 244, 126,1);
 }
 .btn {
     border: none;
