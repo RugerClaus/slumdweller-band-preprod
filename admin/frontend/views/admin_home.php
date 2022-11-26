@@ -1,6 +1,6 @@
 <section class="productEditor">
     <h2>Product Manager: Add Product</h2>
-    <form action="addToProducts.php" method="post" enctype="multipart/form-data">
+    <form action="backend/addToProducts.php" method="post" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Product Name: ">
         <textarea name="description" style="font-family: helvetica;" id="" placeholder="Description: " cols="30" rows="10"></textarea>
         <input type="file" name="image1" value="image1">
@@ -17,9 +17,9 @@
             <option value="0">No</option>
         </select>
         <input type="number" placeholder="Price:" name="price" id="price" />
-
-        <input type="submit" name='addToProducts' value='Submit to Site' class="btn">
         <input type="number" name="stockquantity" placeholder="Quantity In Stock">
+        <input type="submit" name='addToProducts' value='Submit to Site' class="btn">
+        
     </form>
     <h2>Tour Date Manager: Add</h2>
     <form action="addToTourDates.php" method="post" >

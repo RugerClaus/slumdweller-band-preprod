@@ -17,6 +17,6 @@ if(!unlink('../' . $file_pointer1) && unlink('../' . $file_pointer2) && unlink('
 }else {
     echo $file_pointer1 . " has been deleted";
 }
-header("location: products.php");
+header("location: ../index.php");
 
 

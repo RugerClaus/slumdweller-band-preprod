@@ -49,7 +49,7 @@
                 echo "</td>";
 
                 echo "<td>";
-                echo "<form action='deleteProduct.php' method='post'>";
+                echo "<form action='backend/deleteProduct.php' method='post'>";
                 echo "<input type='hidden' name='image1' value='" . $row['image1'] . "' />";
                 echo "<input type='hidden' name='image2' value='" . $row['image2'] . "' />";
                 echo "<input type='hidden' name='image3' value='" . $row['image3'] . "' />";

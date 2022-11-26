@@ -52,7 +52,6 @@
 
         $query = "UPDATE `products`  SET `name`='$name',`description`='$desc',`type`='$type',`in_stock`='$instock',`price`='$price',`image1`='$u1',`image2`='$u2',`image3`='$u3',`image4`='$u4',`image5`='$u5', `stockqty`='$shopQTY' where `product_id` = '$id'";
         $slumdweller->query($query);
-        $_SESSION['page'] = 'edit_product';
-        $page = $_SESSION['page'];
+        header("location: ../index.php");
     }
 ?>
