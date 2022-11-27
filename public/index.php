@@ -60,5 +60,6 @@
             
         ?>
     </main>
+    <script src="../frontend/js/index.js"></script>
 </body>
 </html>
