@@ -11,5 +11,7 @@
             "email": "rogerrock12games@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "stripe/stripe-php": "^10.0"
+    }
 }

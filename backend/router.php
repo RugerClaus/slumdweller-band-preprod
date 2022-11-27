@@ -52,5 +52,10 @@ if(isset($_POST['details'])){
     $page = $_POST['product_id'];
     header("location: ../public/index.php?=$page");
 }
+if(isset($_GET['Cart'])){
+    $_SESSION['page'] = 'Cart';
+    $page = $_SESSION['page'];
+    header("location: ../public/index.php?=$page");
+}
 
 

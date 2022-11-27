@@ -4,6 +4,8 @@
     include '../backend/Model/geolocation.php';
     
     $products = $slumdweller->query("SELECT * FROM products");
+    $cart = $slumdweller->query("SELECT * FROM cart");
+    $_SESSION['cart'] = mysqli_num_rows($cart)
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +25,7 @@
             <input type="submit" name="Albums_and_Merch" value="Albums and Merch">
             <input type="submit" name="About" value="About">
             <input type="submit" name="Contact" value="Contact">
+            <button type="submit" name="Cart" class="btn">Cart <?php echo $_SESSION['cart'] ?></button>
         </form>
     </header>
     <div class="sidebar">
@@ -55,6 +58,9 @@
             }
             if($_SESSION['page'] === 'Details'){
                 include '../frontend/views/details.php';
+            }
+            if($_SESSION['page'] === 'Cart'){
+                include '../frontend/views/cart.php';
             }
         ?>
     </main>
