@@ -7,8 +7,4 @@ subimages.forEach(image => {
         product.src = image.src
         image.src = mainImage
     })
-    if(image.innerHTML == '') {
-        image.classList.add('noSubImage')
-        image.classList.remove('noSubImage')
-    }
 })
