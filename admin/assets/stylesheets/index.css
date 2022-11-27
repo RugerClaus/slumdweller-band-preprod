@@ -50,6 +50,18 @@
   resize: none;
 }
 
+.tourDates {
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 30px;
+  gap: 2rem;
+}
+
 .productManager {
   display: flex;
   flex-direction: column;

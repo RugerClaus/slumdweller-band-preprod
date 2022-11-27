@@ -6,6 +6,7 @@
     $query = "SELECT * FROM products";
 
     $products = $slumdweller->query($query);
+    $tour_dates = $slumdweller->query("SELECT * FROM tour")
 
 
 ?>
@@ -27,7 +28,6 @@
         </form>
         <form action="" method="get">
             <input type="submit" name="adminhome" value="Home"/>
-            <input type="submit" name="aboutmanager" value="About Manager"/>
             <input type="submit" name="productmanager" value="Product Manager" />
             <input type="submit" name="tourdatemanager" value="Tour Manager" />
         </form>
@@ -41,12 +41,6 @@
                 $_SESSION['page'] = 'Admin_Home';
                 $page = $_SESSION['page'];
                 include 'frontend/views/admin_home.php';
-                
-            }
-            if(isset($_GET['aboutmanager'])){
-                $_SESSION['page'] = 'About_Manager';
-                $page = $_SESSION['page'];
-                include 'frontend/views/about_manager.php';
                 
             }
             if(isset($_GET['productmanager'])){

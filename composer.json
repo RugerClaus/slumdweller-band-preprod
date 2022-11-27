@@ -1,0 +1,15 @@
+{
+    "name": "roger/slumdweller-band-preprod",
+    "autoload": {
+        "psr-4": {
+            "Roger\\SlumdwellerBandPreprod\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rugerclaus",
+            "email": "rogerrock12games@gmail.com"
+        }
+    ],
+    "require": {}
+}
