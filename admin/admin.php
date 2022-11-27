@@ -21,6 +21,10 @@
 </head>
 <body>
     <header class="header">
+        <h1>Hello, <?php echo $_SESSION['user_name'] ?></h1>
+        <form action="../backend/Controller/logout.php" method="post">
+            <input type="submit" name="<?php echo $_SESSION['user_id']; ?>" value="logout">
+        </form>
         <form action="" method="get">
             <input type="submit" name="adminhome" value="Home"/>
             <input type="submit" name="aboutmanager" value="About Manager"/>

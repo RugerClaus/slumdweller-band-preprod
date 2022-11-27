@@ -97,6 +97,7 @@ main .details .subimages {
   align-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  max-height: 500px;
 }
 main .details .subimages .subimage {
   border: 1px solid white;
@@ -144,4 +145,8 @@ main .merch .product img {
 
 .btn:hover {
   background-color: rgb(7, 155, 83);
+}
+
+.noSubImage {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
