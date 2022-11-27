@@ -56,8 +56,6 @@
             if($_SESSION['page'] === 'Details'){
                 include '../frontend/views/details.php';
             }
-            
-            
         ?>
     </main>
     <script src="../frontend/js/index.js"></script>
