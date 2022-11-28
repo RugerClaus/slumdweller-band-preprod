@@ -131,10 +131,7 @@ main {
         display: flex;
         flex-direction: column;
         
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        
             table {
                 border-spacing: 4rem;
                 tr {
@@ -149,7 +146,6 @@ main {
             .btn { 
                 width: fit-content;
             }
-        }
     }
 }
 ::-webkit-scrollbar {
@@ -163,7 +159,7 @@ main {
     cursor: pointer;
     border-radius: 10px;
     display: flex;
-    width: 100px;
+    width: fit-content;
 }
 .btn:hover {
     background-color: rgb(7, 155, 83);

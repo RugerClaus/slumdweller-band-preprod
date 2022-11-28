@@ -57,5 +57,10 @@ if(isset($_GET['Cart'])){
     $page = $_SESSION['page'];
     header("location: ../public/index.php?=$page");
 }
+if(isset($_GET['Checkout'])){
+    $_SESSION['page'] = 'Checkout';
+    $page = $_SESSION['page'];
+    header("location: ../public/index.php?=$page");
+}
 
 

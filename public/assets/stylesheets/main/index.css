@@ -133,18 +133,13 @@ main .cart {
   display: flex;
   flex-direction: column;
 }
-main .cart form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .cart form table {
+main .cart table {
   border-spacing: 4rem;
 }
-main .cart form table tr td img {
+main .cart table tr td img {
   width: 200px;
 }
-main .cart form .btn {
+main .cart .btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -162,7 +157,9 @@ main .cart form .btn {
   cursor: pointer;
   border-radius: 10px;
   display: flex;
-  width: 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn:hover {

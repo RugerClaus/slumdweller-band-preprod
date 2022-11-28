@@ -1,30 +1,33 @@
 <section class="cart">
-<?php while($row = $cart->fetch_assoc()){ ?>
+<?php while($row = $cart->fetch_assoc()){ 
+    $product = new Product($row['id'],$row['product'],$row['image'],null,null,null,null,$row['type'],null,null,$row['price'],null)
+    ?>
 
-    <form action="../backend/Controller/proceedToCheckout.php" method="post">
+    
         <table>
             <tr>
-                <td>
+                <td class="productName">
                     <?php echo $row['product'] ?>
                 </td>
-                <td>
-                    <input type="number" name="qty" value="<?php echo $row['qty'] ?>">
-                </td>
-                <td>
+                <td class='productImage'>
                     <img src="../admin/<?php echo $row['image'] ?>" alt="">
                 </td>
-                <td>
-                    <?php echo $row['price'] ?>
+                <td style="display: flex;">
+                    <label for="prePrice"><?php echo $ipdat->geoplugin_currencySymbol; ?></label><input name="prePrice" class="productPrice" style="background: none;color: white; border:none;" type="number" disabled="true" value="<?php echo $row['price'] ?>">
                 </td>
                 <td>
                     <form action="../backend/Controller/deleteFromCart.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                         <input type="submit" name="delete" value="Delete">
                     </form>
                 </td>
             </tr>
         </table>
-        <input type="hidden" name="name" value="<?php echo $row['name'] ?>">
-        <input type="submit" value="Checkout" id="checkout" class="btn">
-    </form>
+        
+        
     <?php } ?>
+    <form action="../backend/Controller/proceedToCheckout.php" method="post">
+        <input type="hidden" name="price" id="finalprice" value="">
+        <input type="submit" name="checkout" value="Checkout" id="checkout" class="btn">
+    </form>
 </section>

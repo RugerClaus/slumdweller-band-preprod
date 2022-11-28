@@ -2,6 +2,7 @@
     include '../backend/Controller/session.php';
     include '../backend/Model/connection.php';
     include '../backend/Model/geolocation.php';
+    include '../backend/Model/classes.php';
     
     $products = $slumdweller->query("SELECT * FROM products");
     $cart = $slumdweller->query("SELECT * FROM cart");
@@ -62,8 +63,12 @@
             if($_SESSION['page'] === 'Cart'){
                 include '../frontend/views/cart.php';
             }
+            if($_SESSION['page'] === 'Checkout'){
+                include '../frontend/views/checkout.php';
+            }
         ?>
     </main>
+    
     <script src="../frontend/js/index.js"></script>
 </body>
 </html>
