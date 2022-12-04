@@ -144,6 +144,17 @@ main .contact .contactformbox form input {
 main .contact .contactformbox form textarea {
   font-size: 2rem;
 }
+main .tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .tour .tour_dates {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
 main .merch {
   display: flex;
   flex-direction: column;

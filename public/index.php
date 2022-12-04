@@ -6,7 +6,8 @@
     
     $products = $slumdweller->query("SELECT * FROM products");
     $cart = $slumdweller->query("SELECT * FROM cart");
-    $_SESSION['cart'] = mysqli_num_rows($cart)
+    $_SESSION['cart'] = mysqli_num_rows($cart);
+    $tour_dates = $slumdweller->query("SELECT * FROM tour");
 ?>
 
 <!DOCTYPE html>
@@ -74,6 +75,8 @@
         if(document.querySelector('.cart').innerHTML.length < 1) {
             document.querySelector('.cart').style.display = 'none'
         }
+        
     </script>
+    <script src="../frontend/js/contact.js"></script>
 </body>
 </html>

@@ -22,9 +22,9 @@
         
     </form>
     <h2>Tour Date Manager: Add</h2>
-    <form action="addToTourDates.php" method="post" >
+    <form action="backend/addToTourDates.php" method="post" >
         <input type="text" name="location" placeholder="Location:" />
         <input type="date" name="date" />
-        <input type="submit" name="add" value="Add">
+        <input type="submit" name="addtour" value="Add">
     </form>
 </section>

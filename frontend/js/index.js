@@ -6,7 +6,7 @@ const image = document.querySelectorAll('.productImage')
 const price = document.querySelectorAll('.productPrice')
 const finalPriceInput = document.getElementById('finalprice')
 const finalNameInput = document.getElementById('names')
-const contactForm = document.getElementById('contactForm')
+
 
 const namesArr = []
 
@@ -35,4 +35,4 @@ subimages.forEach(image => {
 
 finalPriceInput.value = finalPrice
 
-contactForm.addEventListener('submit', )
+
