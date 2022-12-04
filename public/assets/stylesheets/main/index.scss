@@ -111,19 +111,63 @@ main {
             height: 40%;
         }
     }
-    .merch {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 5rem;
-        
-        .product {
-            width: 100%;
+    .about {
+        flex-direction: column;
+        align-items: center;
+        figure {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 2rem;
+        }
+        img {
+            width: 40%;
+        }
+    }
+    .contact {
+        flex-direction: column;
+        gap: 2rem;
+        .contactformbox {
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                input {
+                    font-size: 2rem;
+                }
+
+                textarea {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .merch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            
+            
+
+            .btn {
+                font-size: 1rem;
+                max-width: fit-content;
+            }
+            
+            h2 {
+                font-size: 1rem;
+            }
             
             img {
-                width: 40%;
+                width: 20%;
             }
         }
     }

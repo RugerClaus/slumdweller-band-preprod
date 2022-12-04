@@ -4,7 +4,6 @@
     ?>
 
     <div class="product">
-        <h2><?php echo $row['name']; ?></h2>
         <img src="../admin/<?php echo $row['image1']; ?>" alt="<?php echo $row['name']; ?>">
         <form action="../backend/router.php" method="post">
             <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
@@ -18,7 +17,7 @@
             <input type="hidden" name="description" value="<?php echo $row['description'] ?>">
             <input type="hidden" name="instock" value="<?php echo $row['in_stock'] ?>">
             <input type="hidden" name="price" value="<?php echo $row['price'] ?>">
-            <input type="submit" name="details" value="View Details" class="btn">
+            <input type="submit" name="details" value="<?php echo $row['name']; ?>" class="btn">
         </form>
     </div>
             

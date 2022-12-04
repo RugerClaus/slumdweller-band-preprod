@@ -115,19 +115,58 @@ main .landing {
 main .landing img {
   height: 40%;
 }
-main .merch {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 5rem;
-}
-main .merch .product {
-  width: 100%;
-  display: flex;
+main .about {
   flex-direction: column;
   align-items: center;
 }
-main .merch .product img {
+main .about figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .about img {
   width: 40%;
+}
+main .contact {
+  flex-direction: column;
+  gap: 2rem;
+}
+main .contact .contactformbox form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+main .contact .contactformbox form input {
+  font-size: 2rem;
+}
+main .contact .contactformbox form textarea {
+  font-size: 2rem;
+}
+main .merch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main .merch .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .merch .product .btn {
+  font-size: 1rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+main .merch .product h2 {
+  font-size: 1rem;
+}
+main .merch .product img {
+  width: 20%;
 }
 main .cart {
   display: flex;

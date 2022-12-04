@@ -18,16 +18,25 @@
         <input type="number" name="stockquantity" value="<?php echo $product->shopQTY?>">
         <p>Description: </p>
         <textarea name="description" style="font-family: helvetica; resize: none;"  cols="30" rows="10"><?php echo $product->description ?></textarea>
-        <h2>Image 1:</h2>
-        <input type="file" name="image1" value="<?php echo $product->image1?>">
-        <h2>Image 2:</h2>
-        <input type="file" name="image2" value="<?php echo $product->image2?>">
-        <h2>Image 3:</h2>
-        <input type="file" name="image3" value="<?php echo $product->image3?>">
-        <h2>Image 4:</h2>
-        <input type="file" name="image4" value="<?php echo $product->image4?>">
-        <h2>Image 5:</h2>
-        <input type="file" name="image5" value="<?php echo $product->image5?>">
+        
+        
         <input type="submit" name="update" class="btn" />
+        
+        
     </form>
+    <h1>Edit Images</h1>
+    <p>Note: you will have to update every image when you use this form.</p>
+    <form action="backend/editImages.php" enctype="multipart/form-data" method="post">
+            <h2>Image 1:</h2>
+            <input type="file" name="image1" value="<?php echo $product->image1?>">
+            <h2>Image 2:</h2>
+            <input type="file" name="image2" value="<?php echo $product->image2?>">
+            <h2>Image 3:</h2>
+            <input type="file" name="image3" value="<?php echo $product->image3?>">
+            <h2>Image 4:</h2>
+            <input type="file" name="image4" value="<?php echo $product->image4?>">
+            <h2>Image 5:</h2>
+            <input type="file" name="image5" value="<?php echo $product->image5?>">
+            <input type="submit" class="btn" name="updateImages">
+        </form>
 </section>

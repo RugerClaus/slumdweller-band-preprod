@@ -26,7 +26,7 @@
             <input type="submit" name="Albums_and_Merch" value="Albums and Merch">
             <input type="submit" name="About" value="About">
             <input type="submit" name="Contact" value="Contact">
-            <button type="submit" name="Cart" class="btn">Cart <?php echo $_SESSION['cart'] ?></button>
+            <button type="submit" name="Cart" class="btn cart"><?php if($_SESSION['cart'] > 0) echo "Cart" . $_SESSION['cart'] ?></button>
         </form>
     </header>
     <div class="sidebar">
@@ -70,5 +70,10 @@
     </main>
     
     <script src="../frontend/js/index.js"></script>
+    <script>
+        if(document.querySelector('.cart').innerHTML.length < 1) {
+            document.querySelector('.cart').style.display = 'none'
+        }
+    </script>
 </body>
 </html>
